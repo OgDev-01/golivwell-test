@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("bg-[hsla(231, 100%, 99%, 1)]")}>
+      <body className={cn("bg-[#F8F9FF]")}>
         <Nav />
         <main className="pb-16">{children}</main>
         <Footer />

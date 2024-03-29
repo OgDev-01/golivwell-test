@@ -8,8 +8,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        outlined:
-          "bg-transparent font-chivo border border-green-100 text-green-100",
+        outlined: "bg-white font-chivo border border-green-100 text-green-100",
         filled: "bg-green-100 text-white ",
 
         highlight: "bg-green-10 text-green-100 ",

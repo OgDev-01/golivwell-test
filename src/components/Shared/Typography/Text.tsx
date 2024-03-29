@@ -61,7 +61,7 @@ const Text: React.FC<TextProps> = ({
         strikethrough && "line-through",
         getTypeClass(type),
         mulish.className,
-        "font-normal text-dark",
+        "font-normal",
         className
       )}
       {...props}

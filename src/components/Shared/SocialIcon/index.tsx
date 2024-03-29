@@ -1,3 +1,4 @@
+import { cn } from "@/libs/utils";
 import { ReactNode } from "react";
 import {
   FaBehance,
@@ -19,8 +20,13 @@ export interface SocialIconProps {
     | "youtube"
     | "behance";
   href: string;
+  isTeam?: boolean;
 }
-export default function SocialIcon({ href, platform }: SocialIconProps) {
+export default function SocialIcon({
+  href,
+  platform,
+  isTeam = false,
+}: SocialIconProps) {
   const SocialIcon = {
     youtube: <FaYoutube />,
     linkedin: <FaLinkedin />,
@@ -32,7 +38,10 @@ export default function SocialIcon({ href, platform }: SocialIconProps) {
   };
   return (
     <a
-      className="text-white p-2 rounded-full bg-[#4E4D4D]"
+      className={cn(
+        "p-2 rounded-full",
+        isTeam ? "bg-[#E5F4F2] text-dark" : " bg-[#4E4D4D] text-white"
+      )}
       target="_blank"
       href={href}
     >
