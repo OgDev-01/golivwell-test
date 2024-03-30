@@ -1,3 +1,6 @@
+# GoLivWell Test App
+<img width="500" src="https://res.cloudinary.com/smithtech/image/upload/v1711806152/hnqdmiyzpnycwz7mbcvx.png" />
+
 ## About Codebase
 
 This codebase is a simple Next.js project that uses TypeScript, Tailwind CSS, and ESLint. It is a good starting point for a new project that requires these technologies.
