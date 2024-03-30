@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About Codebase
+
+This codebase is a simple Next.js project that uses TypeScript, Tailwind CSS, and ESLint. It is a good starting point for a new project that requires these technologies.
 
 ## Getting Started
 
