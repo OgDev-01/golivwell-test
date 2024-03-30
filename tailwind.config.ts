@@ -33,9 +33,9 @@ const config: Config = {
         screens: {
           sm: "540px",
           md: "720px",
-          lg: "1100px",
-          xl: "1100px",
-          "2xl": "1100px",
+          lg: "1130px",
+          xl: "1130px",
+          "2xl": "1130px",
         },
       },
       screens: {

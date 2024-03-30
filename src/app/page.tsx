@@ -11,6 +11,7 @@ import Fedex from "public/partners/fedex.png";
 import HeroBanner from "public/hero-banner.png";
 import LandingKitImg from "public/landing-kit.png";
 import Mockup from "public/mockup.png";
+import MockupTablet from "public/Mockup-tablet.png";
 
 import Button from "@/components/Shared/Button";
 import Title from "@/components/Shared/Typography/Title";
@@ -23,8 +24,9 @@ import { FaArrowRight } from "react-icons/fa";
 import { REVIEWS, PRICING, TEAM_MEMBERS } from "@/data";
 import PricingCard from "@/components/Shared/PricingCard";
 import TeamCard from "@/components/Shared/TeamCard";
-import Link from "next/link";
 import SocialIcon from "@/components/Shared/SocialIcon";
+import { Input } from "@/components/Shared/Input";
+import Form from "@/components/Form";
 
 const partners = [
   { name: "Airbnb", image: AirBnb },
@@ -68,7 +70,7 @@ const metrics = [
 
 export default function Home() {
   return (
-    <div className="pt-16 md:pt-24 lg:pt-40 container flex flex-col gap-16 md:gap-24 lg:gap-36">
+    <div className="pt-16 md:pt-24 lg:pt-40 container flex flex-col gap-36 md:gap-24 lg:gap-36">
       {/* Main hero section */}
       <section className="flex item-center lg:justify-between flex-col lg:flex-row ">
         <div className="basis-[60%] flex gap-6 flex-col justify-center pb-10">
@@ -200,9 +202,9 @@ export default function Home() {
             See how our landing page ui kit is making an impact.
           </Text>
         </div>
-        <div className="grid lg:grid-cols-3 gap-4 lg:gap-10 ">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 ">
           {REVIEWS.map(({ review, rating, reviewer }, idx) => (
-            <div key={idx} className="mt-6">
+            <div key={idx} className="">
               <ReviewCard review={review} rating={rating} reviewer={reviewer} />
             </div>
           ))}
@@ -223,7 +225,7 @@ export default function Home() {
           </Text>
         </div>
         <div>
-          <div className="grid lg:grid-cols-3 gap-4 mt-6">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 mt-6">
             {PRICING.map((pricing) => (
               <div key={pricing.title}>
                 <PricingCard
@@ -263,10 +265,10 @@ export default function Home() {
 
       {/* Call to action */}
       <section>
-        <div className="bg-[#F2BFAF] flex rounded-2xl flex-col md:flex-row">
+        <div className="bg-[#F2BFAF] flex rounded-2xl flex-col md:flex-row max-sm:max-h-[630px] overflow-hidden">
           <div className="flex-1 px-10 py-10 flex flex-col gap-4">
             <Title
-              className=" text-4xl lg:text-5xl font-semibold md:font-bold text-center md:text-left !leading-[3rem] lg:!leading-[4rem]"
+              className=" text-3xl lg:text-5xl font-semibold md:font-bold text-center md:text-left !leading-[3rem] lg:!leading-[4rem]"
               level={2}
             >
               Get Landing Page UI Kit Today!
@@ -280,7 +282,8 @@ export default function Home() {
             </Button>
           </div>
           <div className="flex-1">
-            <Image src={Mockup} alt="Hero banner" />
+            <Image src={Mockup} alt="Hero banner" className="hidden lg:block" />
+            <Image src={MockupTablet} alt="Hero banner" className="lg:hidden" />
           </div>
         </div>
       </section>
@@ -297,22 +300,22 @@ export default function Home() {
               help. Contact us for quick and friendly support.
             </Text>
           </div>
-          <div className="flex flex-col mt-8">
-            <div className="flex flex-col gap-4">
+          <div className="flex flex-col mt-8 gap-8 lg:flex-row lg:pr-28">
+            <div className="flex flex-col gap-4 flex-1">
               <div>
                 <a
                   href="tel:+012 345 6789"
                   className="flex items-center gap-2 font-light"
                 >
-                  <LuPhoneCall className="text-green-400 text-lg" /> +012 345
+                  <LuPhoneCall className="text-green-100 text-lg" /> +012 345
                   6789
                 </a>
                 <a
                   href="mailto:Hello@animaapp.com"
                   className="flex items-center gap-2 font-light"
                 >
-                  <MdOutlineMailOutline className="text-green-400 text-lg" />
-                  Hello@animaapp.com
+                  <MdOutlineMailOutline className="text-green-100 text-lg" />
+                  hello@animaapp.com
                 </a>
               </div>
               <div className="mt-4">
@@ -333,9 +336,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <form>
-              <input type="text" className="border rounded-xl px-3 py-2" />
-            </form>
+            <Form />
           </div>
         </div>
       </section>

@@ -10,11 +10,11 @@ export default function Footer() {
   ];
   return (
     <footer className="bg-dark text-white">
-      <div className="container py-6 flex justify-between">
-        <Text className="text-white text-sm">
-          © 2023 Anima’s Landing Page Ui Kit.
+      <div className="container py-6 flex flex-col md:flex-row md:justify-between items-center">
+        <Text className="text-white text-sm order-2">
+          © {new Date().getFullYear()} Anima’s Landing Page Ui Kit.
         </Text>
-        <div className="flex items-center gap-3 text-xl">
+        <div className="flex items-center gap-3 text-xl order-1">
           {footerSocials.map(({ platform, href }) => (
             <SocialIcon key={platform} platform={platform} href={href} />
           ))}
